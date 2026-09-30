@@ -5,43 +5,443 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-          content="Página web creada con HTML semántico, CSS y accesibilidad">
+          content="Página personal creada con HTML semántico, accesibilidad y CSS">
 
-    <title>Mi página web</title>
+    <title>Mi perfil personal</title>
+
     <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-    <header>
-        <h1>Mi página web</h1>
+    <!-- ENCABEZADO -->
+
+    <header class="site-header">
+
+        <div class="container">
+
+            <a href="#inicio" class="logo">
+                Mi Perfil
+            </a>
+
+            <!-- NAVEGACIÓN -->
+
+            <nav aria-label="Navegación principal">
+
+                <ul class="nav-list">
+
+                    <li>
+                        <a href="#inicio">Inicio</a>
+                    </li>
+
+                    <li>
+                        <a href="#sobre-mi">Sobre mí</a>
+                    </li>
+
+                    <li>
+                        <a href="#proyectos">Proyectos</a>
+                    </li>
+
+                    <li>
+                        <a href="#contacto">Contacto</a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
     </header>
 
-    <main>
 
-        <section>
+    <!-- CONTENIDO PRINCIPAL -->
 
-            <h2>Bienvenido</h2>
+    <main id="inicio">
+
+        <!-- PRESENTACIÓN -->
+
+        <section class="hero container"
+                 aria-labelledby="titulo-principal">
+
+            <p class="eyebrow">
+                Perfil personal
+            </p>
+
+            <h1 id="titulo-principal">
+                Arvin Villota
+            </h1>
+
+            <p class="hero-text">
+                Estudiante interesado en tecnología,
+                electrónica, electricidad y desarrollo web.
+            </p>
+
+            <a href="#contacto" class="button">
+                Contactarme
+            </a>
+
+        </section>
+
+
+        <!-- SOBRE MÍ -->
+
+        <section id="sobre-mi"
+                 class="section container"
+                 aria-labelledby="titulo-sobre-mi">
+
+            <h2 id="titulo-sobre-mi">
+                Sobre mí
+            </h2>
 
             <p>
-                Esta página fue desarrollada utilizando
-                HTML semántico, accesibilidad y CSS.
+                Soy estudiante y me interesa aprender sobre
+                tecnología, electrónica, electricidad y
+                desarrollo web.
+            </p>
+
+            <p>
+                Me gusta desarrollar proyectos académicos,
+                aprender nuevas herramientas y mejorar mis
+                conocimientos tecnológicos.
+            </p>
+
+        </section>
+
+
+        <!-- PROYECTOS -->
+
+        <section id="proyectos"
+                 class="section container"
+                 aria-labelledby="titulo-proyectos">
+
+            <h2 id="titulo-proyectos">
+                Mis proyectos
+            </h2>
+
+            <div class="cards">
+
+
+                <!-- PROYECTO 1 -->
+
+                <article class="card">
+
+                    <img
+                        src="proyecto1.png.jpg"
+                        alt="Imagen representativa de un proyecto de electrónica"
+                        class="card-image">
+
+                    <div class="card-content">
+
+                        <h3>
+                            Proyecto de electrónica
+                        </h3>
+
+                        <p>
+                            Desarrollo y simulación de circuitos
+                            electrónicos utilizando diferentes
+                            componentes.
+                        </p>
+
+                        <ul>
+
+                            <li>Diseño de circuitos</li>
+
+                            <li>Simulación</li>
+
+                            <li>Análisis de resultados</li>
+
+                        </ul>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PROYECTO 2 -->
+
+                <article class="card">
+
+                    <img
+                        src="proyecto2.png.jpg"
+                        alt="Imagen representativa de un proyecto de desarrollo web"
+                        class="card-image">
+
+                    <div class="card-content">
+
+                        <h3>
+                            Proyecto de desarrollo web
+                        </h3>
+
+                        <p>
+                            Creación de páginas web utilizando
+                            HTML, CSS y herramientas de control
+                            de versiones.
+                        </p>
+
+                        <ul>
+
+                            <li>HTML semántico</li>
+
+                            <li>CSS</li>
+
+                            <li>Git y GitHub</li>
+
+                        </ul>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- HABILIDADES -->
+
+        <section class="section container"
+                 aria-labelledby="titulo-habilidades">
+
+            <h2 id="titulo-habilidades">
+                Habilidades
+            </h2>
+
+            <ul class="skills-list">
+
+                <li>HTML</li>
+
+                <li>CSS</li>
+
+                <li>Git y GitHub</li>
+
+                <li>Electrónica</li>
+
+                <li>Electricidad</li>
+
+                <li>Resolución de problemas</li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- FORMULARIO -->
+
+        <section id="contacto"
+                 class="section container"
+                 aria-labelledby="titulo-contacto">
+
+            <h2 id="titulo-contacto">
+                Contacto
+            </h2>
+
+            <p>
+                Puedes utilizar el siguiente formulario
+                para enviar un mensaje.
+            </p>
+
+            <form class="contact-form">
+
+                <fieldset>
+
+                    <legend>
+                        Información de contacto
+                    </legend>
+
+
+                    <div class="form-group">
+
+                        <label for="nombre">
+                            Nombre
+                        </label>
+
+                        <input
+                            type="text"
+                            id="nombre"
+                            name="nombre"
+                            autocomplete="name"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="correo">
+                            Correo electrónico
+                        </label>
+
+                        <input
+                            type="email"
+                            id="correo"
+                            name="correo"
+                            autocomplete="email"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="mensaje">
+                            Mensaje
+                        </label>
+
+                        <textarea
+                            id="mensaje"
+                            name="mensaje"
+                            rows="6"
+                            required></textarea>
+
+                    </div>
+
+
+                    <button type="submit">
+                        Enviar mensaje
+                    </button>
+
+                </fieldset>
+
+            </form>
+
+        </section>
+
+
+        <!-- TABLA -->
+
+        <section class="section container"
+                 aria-labelledby="titulo-tabla">
+
+            <h2 id="titulo-tabla">
+                Conocimientos
+            </h2>
+
+            <div class="table-container">
+
+                <table>
+
+                    <caption>
+                        Nivel de conocimientos
+                    </caption>
+
+                    <thead>
+
+                        <tr>
+
+                            <th scope="col">
+                                Área
+                            </th>
+
+                            <th scope="col">
+                                Nivel
+                            </th>
+
+                            <th scope="col">
+                                Aplicación
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>HTML</td>
+
+                            <td>Básico</td>
+
+                            <td>Desarrollo web</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>CSS</td>
+
+                            <td>Básico</td>
+
+                            <td>Diseño web</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Git y GitHub</td>
+
+                            <td>Básico</td>
+
+                            <td>Control de versiones</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Electrónica</td>
+
+                            <td>Intermedio</td>
+
+                            <td>Proyectos académicos</td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ENLACES -->
+
+        <section class="section container"
+                 aria-labelledby="titulo-enlaces">
+
+            <h2 id="titulo-enlaces">
+                Enlaces
+            </h2>
+
+            <p>
+
+                <a
+                    href="https://github.com/Arvinfvl/html-css-accesibilidad"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    Ver mi repositorio de GitHub
+
+                </a>
+
             </p>
 
         </section>
 
     </main>
 
-    <footer>
 
-        <p>
-            Página creada para una actividad académica.
-        </p>
+    <!-- PIE DE PÁGINA -->
+
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <p>
+                Página creada por Arvin Villota.
+            </p>
+
+            <p>
+                &copy; 2026 - Actividad académica de HTML y CSS.
+            </p>
+
+        </div>
 
     </footer>
 
